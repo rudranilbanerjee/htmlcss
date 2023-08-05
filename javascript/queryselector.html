@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>        
+        <tr>
+            <td>1</td>
+            <td>Item-2</td>
+            <td data-ns-test="price">18361</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Item-2</td>
+            <td data-ns-test="price">18361</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Item-3</td>
+            <td data-ns-test="price">17373</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Item-4</td>
+            <td data-ns-test="price">17361</td>
+        </tr>
+    </table>
+    <script>
+        var a=document.querySelectorAll('[data-ns-test="price"]');
+        var totalPrice=0;
+        for(var i=0;i<a.length;i++)
+        {
+            totalPrice+=Number(a[i].innerText);
+        }
+        let table=document.querySelector('table');
+        let total="Total Price"
+        let template=`<tr>
+                        <td>${total}</td>
+                        <td data-ns-test="grandTotal">${totalPrice}</td>
+                    </tr>`;
+        table.innerHTML+=template;
+    </script>
+    <div style='margin-left: 10%;'>
+        <h3>Add Two Numbers</h3>
+        <!--write your code here-->
+        Num1 <input type="numbers" id="num1">
+        Num2 <input type="numbers" id="num2">
+        <button id="mybtn" onclick="fun()">Button</button>
+        Result <input type="number" id="result" disabled>
+    
+    </div>
+    <script>
+        const num1=document.getElementById('num1').value;
+        const num2=document.getElementById('num2').value;
+        console.log(num1);
+        const result=document.getElementById('result');
+        function fun()
+        {
+            alert(num1);
+            var result1=num1+num2;
+            result.value=result1;
+        }
+        alert('hello""')
+    </script>
+</body>
+</html>

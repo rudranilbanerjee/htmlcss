@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Destructuring object
+        let obj={
+            name:"rudra",
+            age:25,
+            course:"B.Tech"
+        }
+        let {name,...course}=obj;
+        console.log(name);
+        console.log(course);
+        var student={
+            ...obj,
+        }
+        console.log(student);
+        // Destructuring Array
+        let arr=["rudranil","B.tech",25];
+        let [name1,age1] = arr;
+        console.log(name1);
+        console.log(age1);
+        let arr1=[6,1,2,4,5];
+        let [name2,...arr3]=arr1;
+        console.log(name2+" "+arr3);
+    </script>
+</body>
+</html>

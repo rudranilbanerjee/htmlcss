@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if-else statement
+        var x="15";
+        var y=15;
+        if(x===y)
+        console.log("equal hain");
+        else
+        console.log("not equal");
+
+        // logical operator
+        // there have three type of logical operator
+        // 1) && --> Logical AND; if both condition are true then this return true otherwise false
+              var a=15;
+              var b=13;
+              var c=(a!=b && a>b);
+              console.log(c); // this is true because both the condition is true
+        // 2) || --> Logical OR; if any one condition is true then its return true otherwise false
+              c=(a===b || a>b);
+              console.log(c);
+        // 3) ! --> Logical NOT; if something its true then its return false and if something false then it return true 
+              c=!(a===b || a>b);
+              console.log(c);
+        // if - else if statement
+        var time=25;
+        if(time<10)
+        {
+            console.log("less than 10");
+        }else if(time<20){
+            console.log("less than 20")
+        }else{
+            console.log("greater than 10 and 20");
+        }
+
+        // ternary operator
+        // syntax:-  (condition) ? true statement : false statement
+        var a=13;
+        var b=6;
+        (a>b)?console.log("a is greater than b"):console.log("a is less than b");
+
+        // switch statement
+        var ch=8;
+        switch(ch)
+        {
+            case 1: console.log("condition 1 is run");
+            break;
+            case 2: console.log("condition 2 is run");
+            break;
+            default: console.log("default condition is run");
+            break;
+        }
+    </script>
+</body>
+</html>

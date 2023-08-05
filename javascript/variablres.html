@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x="rudranil";
+        document.write(x);// print the value of x in window of browser
+        var x=6;
+        var x=9;
+        document.write(x);
+        /*var 34nr="rudranil";
+        document.write(34nr);// this is a Uncaught SyntaxError: Invalid or unexpected token (at variablres.html:16:13) */
+        var first;
+        document.write(first); // its shows on output undefined because we can not assign any value in first variable
+
+        // let
+        let firstName="rudranil";
+        firstName="Rudranil";
+        //both are correct syntax
+        //but
+        /*let secondName="banerjee";
+        let secondName="Banerjee";*/
+        // this is a Uncaught SyntaxError: Identifier 'secondName' has already been declared (at variablres.html:27:13)*/
+
+        // this is a difference between var and let. we can assing multiple value in a variable of let but we can not define same variable in the case of let 
+
+        // const 
+        const second="hello";
+        second="write"; // Uncaught TypeError: Assignment to constant variable at variablres.html:34:15
+        // we can not aasign multiple value in a same variable of const
+    </script>
+</body>
+</html>

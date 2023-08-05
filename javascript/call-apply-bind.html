@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let userDetails={
+            name:"Rudranil",
+            age:23,
+        }
+        let printDetails=function(state,country){
+            console.log(this.name+" "+state+" "+country);
+        }
+        let userDetails1={
+            name:"Rudranil Banerjee",
+            age:23,
+        }
+        printDetails.apply(userDetails1,["lucknow","India"]);
+        let arr=["delhi","India"];
+        let newFun=printDetails.bind(userDetails,"Delhi","India");
+        newFun();
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onresize="myFunction()">
+    <script>
+        /*
+           event in a javascript
+        */
+         // 1) click event--->onclick(keyword)
+         function myFunction()
+         {
+            alert("jjjjj");
+            document.write("Hello");
+         }
+         // 2) Double click----->ondblclick
+         // 3) Right click------> oncontextmenu
+         // 4) Mouse hover ------>onmouseenter; when i am 
+         // 5) Mouse out ------->onmouseout
+         // 6) Mouse down ------->onmousedown
+         // 7) Mouse up ------->onmouseup
+         // 8) key press------->onkeypress; this is work only body tag and form tag
+         // 9) resize window -----> onresize; when we resize the window this event work and its always work only in body tag
+         // 10) scrolling ------> onscroll
+         // 11)when loading the webpage----->onload;
+         // 12) when webpage unload-----> onunload 
+    </script>
+    <p ondblclick="myFunction()">Double-click me</p>
+    <p oncontextmenu="myFunction()">Double-click me</p>
+    <p onmouseenter="myFunction()">Double-click me</p>
+    <p onmouseout="myFunction()">Double-click me</p>
+    <p onmousedown="myFunction()">Double-click me</p>
+    <p onmouseup="myFunction()">Double-click me</p>
+
+</body>
+</html>

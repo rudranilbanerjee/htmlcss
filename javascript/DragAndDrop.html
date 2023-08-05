@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* *{
+            background-color: blue;
+        }
+        .whiteBox{
+            width:155px;
+            height:155px;
+            border:solid 1px white;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .colorBox{
+            background-color: red;
+            width:145px;
+            height:145px;
+        }
+        .hold{
+            border:solid 5px black;
+        }
+        .hide{
+            display:none;
+        } */
+        .menuitem{
+            display:flex;
+            justify-content: space-around;
+            cursor: pointer;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="whiteBox">
+        <div class="colorBox" draggable="true"></div>
+    </div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div>
+    <div class="whiteBox"></div> -->
+    <div class="content" id="list1">
+        <div class="menuitem">
+          <div class="name">Lorem ipsum dolor</div>
+          <div class="cost">Rs.234</div>
+        </div>
+        <div class="menuitem">
+          <div class="name">dolor sit amet</div>
+          <div class="cost">Rs.500</div>
+        </div>
+        <div class="menuitem">
+          <div class="name">dolor voluptate</div>
+          <div class="cost">Rs.2345</div>
+        </div>
+        <div class="menuitem">
+          <div class="name">Consectetur adipisicing elit</div>
+          <div class="cost">Rs.1200</div>
+        </div>
+    </div>
+    <script>
+        const dragArea=document.querySelector('#list1');
+        const menuItem=document.querySelectorAll('.menuitem');
+        let draggingElement="";
+        let x="";
+        let y="";
+        menuItem.forEach((menu,index)=>{
+            menu.setAttribute("draggable","true");
+            menu.setAttribute("id",`list1-${index+1}`);
+        })
+        menuItem.forEach((menu,index)=>{
+            menu.addEventListener('dragstart',(e)=>{
+                draggingElement=e.target.parentNode;
+                const rect = draggingElement.getBoundingClientRect();
+                x=e.pageX-rect.left;
+                y=e.pageY-rect.top;
+                console.log(rect)
+                console.log(x+"    "+y);
+                setTimeout(()=>{
+                   e.target.className="hide";
+                },0)
+            })
+            menu.addEventListener('dragover',(e)=>{
+                e.preventDefault();
+                // second=e.target.getAttribute('data-index');
+                //select.innerHTML=e.target.innerHTML;
+                // select2=e.target.parentNode;
+                // console.log(parentNode);
+                // select1.innerHTML=select2.innerHTML;
+            })
+            menu.addEventListener('dragenter',(e)=>{
+
+            })
+            menu.addEventListener('dragleave',(e)=>{
+
+            })
+            menu.addEventListener('drop',()=>{
+
+            })
+            menu.addEventListener('dragend',(e)=>{
+                e.target.className="menuitem";
+            })
+        })
+
+
+
+
+
+
+
+
+
+
+        // const whiteBoxes=document.getElementsByClassName('whiteBox');
+        // const colorBox=document.querySelector('.colorBox');
+        // colorBox.addEventListener('dragstart',(e)=>{
+        //     //console.log("dragstart");
+        //     e.target.className+=" hold";
+        //     setTimeout(()=>{
+        //        e.target.className="hide";
+        //     },0)
+        // })
+        // colorBox.addEventListener('dragend',(e)=>{
+        //     //console.log('dragEnd');
+        //     e.target.className="colorBox";
+        // })
+        // for(whiteBox of whiteBoxes)
+        // {
+        //     whiteBox.addEventListener('dragover',(e)=>{
+        //         e.preventDefault();
+        //        console.log('dravover')
+        //     })
+        //     whiteBox.addEventListener('dragenter',()=>{
+        //         //console.log('dragEnter')
+        //     })
+        //     whiteBox.addEventListener('dragleave',()=>{
+        //         console.log('dragLeave')
+        //     })
+        //     whiteBox.addEventListener('drop',(e)=>{
+        //         console.log('drop')
+        //         e.target.append(colorBox);
+        //     })
+        // }
+    </script>
+</body>
+</html>

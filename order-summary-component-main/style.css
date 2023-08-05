@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(images/pattern-background-desktop.svg);
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: hsl(225, 100%, 94%);
+}
+.container{
+    max-width:350px;
+    min-width:100px;
+    max-height:80vh;
+    min-height:500px;
+    margin:0 1rem;
+    display:flex;
+    flex-direction: column;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 1rem 0 #0000004d;
+} 
+.hero{
+    margin:0 0 0.5rem 0 ;
+}
+.hero img{
+    width:100%;
+}
+.text-content{
+    display: grid;
+    grid-template-rows: .1fr 1fr 1fr 1fr 1fr;
+}
+.title{
+    padding:0 2rem;
+    margin:0.5rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.subtitle{
+    padding: 0 2rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color:hsl(224,23%,55%);
+}
+.plan-box{
+    padding:0 2rem;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    font-weight: 700;
+    width:100%;
+    margin: 0.5rem;
+}
+.plan-box img{
+    padding: 0;
+    margin:0.5rem;
+}
+.plan{
+    padding:0;
+    text-align:left;
+    margin:0.5rem;
+}
+.plan p:nth-child(even){
+    color:hsl(224,23%,55%);
+}
+.plan-box-right{
+    color:hsl(245, 75%, 52%);
+    font-size: small;
+    padding:0;
+    margin:0.5rem;
+}
+.proceed-btn{
+    display: inline-block;
+    align-items: center;
+    text-decoration: none;
+    background-color: hsl(245, 75%, 52%);
+    cursor: pointer;
+    border-radius: 10px;
+    color:white;
+    font-size: .8rem;
+    padding: 1rem 5rem;
+    margin:0.5rem;
+}
+.cancel-btn{
+    text-decoration: none;
+    color:hsl(224, 23%, 55%);
+    font-weight:600;
+}
+.attribution{
+    font-size: 11px;
+    
+}
+@media only screen and (max-width:380px)
+{
+    .container{
+        height: 40vh;
+    }
+    .common{
+        padding: 0 0.5rem;
+        margin:0.5rem;
+    }
+    .title{
+        font-size: 1.3rem;
+    }
+    
+}

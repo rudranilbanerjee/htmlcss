@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=10;// ----------> this is a global variable;the global variable can work in both of the place inside the function and outside the function
+        function fun()
+        {
+            var b=9;
+            document.write(a);
+        }
+        fun();
+        documennt.write(b); //---------> this is a local variable and its work only inside a function and outside function its show the error.
+    </script>
+</body>
+</html>

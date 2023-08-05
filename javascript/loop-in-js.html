@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*loop in js*/
+        // while loop
+        var a=1;
+        while(a<=10)
+        {
+            document.write("hello<br>");
+            a+=1;
+        }
+        // do-while loop
+        var a=1;
+        do{
+            document.write("yellow<br>");
+            a+=1;
+        }while(a<=10)
+        // for loop
+        for(var a=1;a<=10;a++)
+        {
+            document.write("green<br>");
+            if(a==5)
+            {
+                document.write("bas ho gaya ab rukta hoon");
+                break;
+            }
+        }
+        // find even and odd number
+        function fun(n)
+        {
+            if(n%2===0)
+            document.write("this is a even number");
+            else
+            document.write("this is a odd number");
+        }
+        fun(5);
+        // nested loop
+        
+        for(var a=1;a<=100;a+=10)
+        {
+            for(var b=a;b<a+10;b++)
+            {
+               document.write(b+" ");
+            }
+            document.write("<br>");
+        }
+        for(var a=1;a<=5;a++)
+        {
+            for(var b=1;b<=a;b++)
+            {
+                document.write(b+" ");
+            }
+            document.write("<br>");
+        }
+        for(var a=1;a<=5;a++)
+        {
+            for(var b=1;b<=a;b++)
+            {
+                document.write(a+" ");
+            }
+            document.write("<br>");
+        }
+        for(var a=5;a>=1;a--)
+        {
+            for(var b=1;b<=a;b++)
+            {
+                document.write(a+" ");
+            }
+            document.write("<br>");
+        }
+        for(var a=5;a>=1;a--)
+        {
+            for(var b=a;b>=1;b--)
+            {
+                document.write(b+" ");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

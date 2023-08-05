@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1-D Array
+        // var a=[10,20,30];
+        // //now a is array
+        // console.log(a);
+        // document.write(a+"<br>");
+        // // in js the starting index from 0 to start and we can select any value
+        // document.write(a[2]);
+        // var b=[10,"rudra","banerjee",true,null]
+        // document.write(b[4]);
+        // var p="rudra";
+        // var q=Number(p);
+        // document.write(q);
+        // // but if we want to make this type of array which will initialize after 
+        // var arr=new Array();
+        // arr[0]="rudra";
+        // arr[1]=9;
+        // arr[2]=true;
+        // console.log(arr);
+        // // you can make this type of array which will get the value on runtime
+        // arr[0]=prompt("Enter the value");
+        // document.write(arr[0]);
+        // // if you want to make limited size of array then inside the first parenthesis you will write the number which is the size of the array like
+        // var arr1=new Array(2);
+        // var length=arr1.length;
+        // console.log(length);
+        // // but if you can add more value greater than the size of array then it can't show any error and it will work like dynamic array
+        // arr1[0]=5;
+        // arr1[1]=3;
+        // arr1[2]=6;
+        // arr1[3]=67;
+        // console.log(arr1);
+        // length=arr1.length;
+        // console.log(length);
+        // // the bassic function to add value in a array
+        // // var array=new Array(5);
+        // // for(var i=0;i<array.length;i++)
+        // // {
+        // //     array[i]=prompt("enter the value");
+        // // }
+        // // for(var i=0;i<array.length;i++)
+        // // {
+        // //     document.write(array[i]+"<br>");
+        // // }
+        // Multi-dimensional array
+        var mat=[
+                  ["Harry",18,"Male","B.com"],
+                  ["sunny",19,"Male","BCA"],
+                  ["sarah",18,"Female","BCA"]
+                ]
+        document.write(mat);
+        document.write(mat[0][1]); // here its shows 1st row and 2nd column data
+        document.write("<table border='1px' cellspacing='0'>");
+        document.write("<tr>");
+            document.write("<th>Name</th>");
+            document.write("<th>Age</th>");
+            document.write("<th>Gender</th>");
+            document.write("<th>Education</th>");
+        document.write("</tr>");
+        for(var i=0;i<mat.length;i++)
+        {
+            document.write("<tr>")
+            for(var j=0;j<mat[i].length;j++)
+            {
+                document.write("<td> "+mat[i][j]+"</td>")
+            }
+            document.write("<tr>")
+        }
+        document.write("</table>");
+        // Modification of array
+        var a=["Rudra","banerjee",18,"Male"];
+        document.write(a[0]+"<br>");
+        a[0]="sunny"
+        document.write(a[0]);
+        // delete element in an array
+        // for deleting any element from array we use a predefined keyword which name is delete
+        delete a[1];
+        document.write(a[2]);
+        for(var i=0;i<a.length;i++)
+        {
+            document.write(a[i]);
+        }
+
+        //pre-defined method of array
+        // 1) sort method
+        var a=[16,8,4,32];
+        document.write("<br> Before sorting:- "+a+"<br>"); 
+        a.sort();
+        document.write("After sorting <br>"+a+"<br>"); 
+        // 2) reverse method
+        document.write("<br> Before reverse:- "+a+"<br>"); 
+        a.reverse();
+        document.write("After reverse <br>"+a+"<br>"); 
+        // 3) push method
+        var b=new Array(3);
+        b[0]="rudra";
+        b[1]="nil";
+        b[2]="banerjee";
+        document.write("<br> Before pushing:- "+b+"<br>"); 
+        b.push(14);// add this element in the last index of the array
+        document.write("<br> After pushing:- "+b+"<br>"); 
+        // so in this case the size of the array does not matter
+        // 4) pop method
+        document.write("<br> Before poping:- "+b+"<br>"); 
+        b.pop();
+        b.pop();
+        // delete two element last index
+        document.write("<br> After poping:- "+b+"<br>"); 
+        document.write(b[2]);// this show on output undefined
+        // 5) unshift method
+        // this unshift method will add the element in the first index of this array
+        document.write("<br> Before unshift:- "+b+"<br>"); 
+        b.unshift("laxmi");
+        // delete two element last index
+        document.write("<br> After unshift:- "+b+"<br>"); 
+        // 6) shift method
+        // this shift method will delete the element from last index
+        document.write("<br> Before shifting:- "+b+"<br>"); 
+        b.shift();
+        // delete two element last index
+        document.write("<br> After shifting:- "+b+"<br>"); 
+        // 7) concat method 
+        // when we want to marge two array or two string then we will use concat() method
+        var a=["Harry",18,"Male","B.com"];
+        var b=["sunny",19,"Male","BCA"];
+        var c=a.concat(b);
+        document.write("<br> After concatanating:- "+c+"<br>"); 
+        // we can concate by this method
+        c=c.concat("raj",23,"Male","BBA")
+        document.write("<br> After concatanating:- "+c+"<br>"); 
+        // we can concat two or more array like
+        var d=["hero",24,"Male","CCA"]
+        c=b.concat(a,d,c);
+        document.write("<br> After concatanating:- "+c+"<br>"); 
+
+        // 8) join method
+        // if you want all the value in an array are joined in a single string then we use join method 
+        a=a.join(" ");
+        document.write("<br> After joining by space:- "+a+"<br>"); 
+        b=b.join("$");
+        document.write("<br> After joining by dollar sign:- "+b+"<br>"); 
+        
+        // 9) slice method
+        // if we want to get value from array and make a new array the we use slice method; this method work like subarray in java
+        var a=["Harry",18,"Male","B.com"];
+        var slice=a.slice(1,3);
+        document.write("<br> After sliceing:- "+slice+"<br>"); 
+        slice=a.slice(1);
+        document.write("<br> After sliceing:- "+slice+"<br>"); 
+        // you can put negative value inside the slice method and that time it work reversly means last index start from -1 and go on
+        slice=a.slice(-2);
+        document.write("<br> After sliceing:- "+slice+"<br>");
+        // 10) splice method
+
+        // 11) isArray method
+
+        // 12) indexof method 
+
+        // 13) lastIndexOf method
+
+        // 14) includes method
+
+        // 15) some method 
+
+        // 16) every method
+
+        // 17) find method
+
+        // 18) findIndex method
+
+        // 19) filter method
+
+        // 20) toString method
+
+        // 21) valueOf method
+
+        // 22) fill method
+
+        // 23) forEach method
+
+        // 24) 
+    </script>
+</body>
+</html>

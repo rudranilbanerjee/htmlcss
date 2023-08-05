@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const obj4={
+        //     thisK:"obj4"
+        // }
+        // const obj3={
+        //     thing:"kjhh",
+        //     //__proto__:obj4,
+        // }
+        // // // console.log(obj3);
+        // // // console.log(obj3.__proto__);
+        // const obj2={
+        //     roll:14,
+        //     sub:"section-A",
+        //     //__proto__:obj3,
+        // }
+        // // // function yellow(){
+        // // //   console.log("Jyellow")
+        // // // }
+        // const obj=new Object({
+        //     name:"ajay",       // properties
+        //     city:"bankura",
+        //     intro: function(){       // method
+        //       console.log("hello ");
+        //     },
+        //     //__proto__:obj2,
+        //     // key:"p",
+        // })
+        // obj.prototype=obj2;
+        // // obj["key1"]="insallah";
+        // console.log(obj);
+        // // console.log(obj.__proto__.__proto__.__proto__.__proto__.__proto__);
+        // // 
+        // const arr=["rudra","bhy"];
+        // Array.prototype.show=function(){
+        //     this.forEach((element,idx)=>{
+        //         arr[idx]="Hello "+element;
+        //     })
+        //     return this;
+        // }
+        // console.log(arr.show());
+        // Array.prototype.convertIntoObject=function(){
+        //     let newObj={};
+        //     this.forEach(element=>{
+        //         newObj[element]=element;
+        //     })
+        //     return newObj;
+        // }
+        // console.log(arr.convertIntoObject());
+
+        // function Myprototype(name){
+        //     this.pehchan=name;
+        //     //this.__proto__=obj3;
+        // }
+        // //Myprototype.prototype=obj2;
+        // const rudra= new Myprototype("rudra");
+        // rudra.prototype=obj2;
+        // console.log(rudra);
+        // // class obj1{
+        // // }
+        // // const object=new obj1();
+        // // object[name]="rudra";
+        // // console.log(object);
+        // class FooBar{
+        //     name;
+        //     roll;
+        // }
+        // const foo=new FooBar();
+        // foo["name"]="rudra";
+        // console.log(foo);
+        // function Animal(name, lifeSpan) {
+        //     alert("hello");
+        //     this.name = name;
+        //     this.lifeSpan = lifeSpan;
+        // }
+        // function Reptile() {
+        //     this.layEggs = function layEggs() {
+        //         console.log("Reptile laid eggs.");
+        //     };
+        // }
+        // const e=new Reptile();
+        // console.log(e);
+        // Reptile.prototype = Object.create(Animal.prototype);
+        // // const g=new Reptile();
+        // // console.log(g);
+        // // g.constructor("snake","67 years");
+        // // console.log(g)
+        // /* g={
+        //      name:snake,
+        //      lifeSpan:67 years,
+        //      layEggs = function layEggs() {
+        //         console.log("Reptile laid eggs.");
+        //     },
+        //    }
+        // */
+        // Reptile.prototype.constructor=Reptile;
+        // console.log(Reptile.prototype.constructor);
+        // const vehicle={
+        //     name:"",
+        //     type:"",
+        //     wheelCount:"",
+        // }
+        // console.log(vehicle);
+        // Array.prototype
+        // Array.prototype.includesOneOf=function(arr){
+        //     let bool=false;
+        //     if(arr.length===0)
+        //     return bool;
+        //     for(let i=0;i<arr.length;i++)
+        //     {
+        //         this.forEach(element=>{
+        //             //console.log(element +" "+typeof element +" "+arr[i]+" "+typeof arr[i]);
+        //             if(JSON.stringify(element) === JSON.stringify(arr[i]) )
+        //             {
+        //                bool=true;
+        //             }
+        //         })
+        //     }
+        //     return bool;
+        // }
+        // const arr1=[1, 2, 3, 4, 5, 6];
+        // alert(arr1.includesOneOf([2, 11, 12]));
+        // class API{
+        //     constructor(url){
+        //         this.url=url;
+        //         this.method="GET";
+        //     }
+        //     isSecure(){
+        //        let bool=false;
+        //        let start=this.url.slice(0,5);
+        //        if(start==='https')
+        //        bool=true;
+        //        return bool;
+        //     }
+        //     updateUrl(url){
+        //         this.url=url;
+        //     }
+        // }
+        // const s = new API('http://api. com/api/hello')
+        // console. log(s. isSecure()) // false
+        // s.updateUrl('https://api. com/api/hello')
+        // console. log(s. isSecure()) // true
+        // console.log(s.url) // https://api. com/api/hello
+
+        // console.log(s.method) // GET
+
+        // console.log(s.secure) // undefined (because private field)
+        //let sayHiMixin = {
+
+        // this should inherit from sayMixin, and invoke it's "say" method somehow
+
+        // for example, 
+
+            //say : (name) =>sayMixin.say(name),
+
+        // name is a string, which will infact be the `name` attribute of a `User` object
+
+        // };
+        // sayHiMixin.say("rudra");
+        // console.log(sayHiMixin);
+        // class student{
+        //     constructor(){
+        //         this.name="rudra";
+        //     }// this was called automatically when we make an object by this class Name. 
+        //     hello(){
+        //         console.log("Hello "+ this.city);
+        //         this.season="2018-2022";
+        //     }// this was called by object Name
+        //     static staticMethod(){
+        //         console.log("I am static");
+        //     }// this was called by class Name
+        // }
+        // let st=new student();
+        // st.city="rajkot"
+        // //st.__proto__=obj2;
+        // st["gram"]="khatra";
+        // st.hello=function hello(){
+        //     console.log("second");
+        // }
+        // console.log(st);
+        // st.hello();
+        // student.staticMethod();
+        // class Employee{
+        // constructor(name){
+        //     this._name=name;
+        //     console.log(`${this.name} is a employee`);
+        // }
+        // logIn(){
+        //     console.log("Employee has logged in");
+        // }
+        // logOut(){
+        //     console.log("Employee has logged out");
+        // }
+        // requestleaves(leaves){
+        //     console.log(`Employee has requested ${leaves} leaves`);
+        // }
+        // }
+        // class programmer extends Employee{
+        // // if there is no constructor in child class,this is created automatically
+        // constructor(name){
+        //     super(name);
+        //     console.log(`${this.name} is a programmer`);
+        //     this.requestleaves(7);
+        // }// this line was work in hidden.
+        // requestleaves(leaves){
+        //     super.requestleaves(leaves);
+        //     console.log("one extra leaves will be generated");
+        // }
+        // get name(){
+        //     return this._name;
+        // }
+        // }
+        // let p=new programmer("rudra");
+        // p.requestleaves(70)
+        // console.log(p.name);
+        // console.log(p instanceof programmer);
+        class BankAccount{
+            #balance=0;
+            constructor(name,ammount=0)
+            {
+                this.name=name;
+                this.#balance=ammount;
+            }
+            get balance(){
+                return this.#balance;
+            }
+            set setBalance(ammount)
+            {
+                if(isNaN(ammount))
+                {
+                    throw new Error("Ammount is not a number");
+                }
+                this.#balance=ammount;
+            }
+        }
+        let p1=new BankAccount("rudra",2000);
+        p1.setBalance=900;
+        console.log(p1.balance);
+    </script>
+</body>
+</html>

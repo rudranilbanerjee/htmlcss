@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict"
+        // let myArray=[1,2,3,4];
+        // let obj=new Set(myArray);
+        // obj.add(5);// add data in set
+        // console.log(obj);
+        // obj.delete(5); // delete data in set
+        // console.log(obj);
+        // //obj.clear(); // delete all the data in set
+        // console.log(obj);
+        // console.log(obj.has(9)); // data can be present or not in this set
+        // for(const new1 of obj){
+        //     console.log(new1);// iterator for set
+        // }
+        // obj.forEach((Element)=>{
+        //     console.log(Element);
+        // })
+        // console.log("size of set "+obj.size); // check the size of set
+        
+        //Map->key
+        let myMap=new Map([["a1","ajay"],["a2","vikas"],["a3","anand"]]);
+        console.log(myMap);
+        // add data in map
+        myMap.set("a4",6) // first parameter is key and second oparameter is value 
+        console.log(myMap);
+        myMap.delete("a1");// delete some data from map
+        console.log(myMap);
+        // delete all the data from map
+        // myMap.clear();
+        // console.log(myMap)
+        //get the value of particular any key
+        console.log(myMap.get("a2"));
+        // iterator ove map
+        for(let new1 of myMap)
+        {
+            console.log(new1[0]+" "+new1[1]);
+        }
+        for(let [key,value] of myMap){
+            console.log(key+" "+value);
+        }
+        myMap.forEach((element1)=>{
+            console.log(element1);
+        })
+        myMap.forEach((value,key)=>{
+            console.log(key+" "+value);
+        })
+        // weakset
+        // only store object 
+        // and it can not iterator
+        let ws=new WeakSet();
+        console.log(ws);
+        let ob1={key:"rudra"};
+        let ob2={key:"pallab",};
+        ws.add(ob1);
+        ws.add(ob2);
+        let ob3={key:"raja"};
+        ws.add({key:"raja"});
+        console.log(ws.has(ob3));
+
+        // weakMap
+        // keys are only object and corresponding value is any data type
+        //and it can not iterator
+        let wm=new WeakMap();
+        console.log(wm);
+        let ob4={};
+        let ob5={};
+        wm.set(ob4,"rudra");
+        wm.set(ob5,"Pallab");
+        console.log(wm);
+        console.log(wm.has(ob4));
+        wm.delete(ob5);
+        console.log(wm);
+    </script>
+</body>
+</html>

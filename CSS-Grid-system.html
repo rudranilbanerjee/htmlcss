@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background: #eee;
+            width:90%;
+            margin:50px;
+            display:grid;
+            grid-template-columns: [first-start] 1fr [first-end second-start] 1fr [second-end third-start] 1fr [third-end]; 
+            grid-template-rows: [header-start] 100px [header-end menu-start] 30px [menu-end box-start] min-content [box-end content-start] 300px [content-end footer-start] 80px [footer-end];
+            grid-gap: 10px;
+            align-items:center;
+            justify-items:center;
+        }
+        .items1{
+            background: orangered;
+            grid-row: header-start/header-end;
+            grid-column:first-start/third-end;
+            
+        }
+        .items2{
+            background: yellowgreen;
+            grid-row:menu-start/menu-end;
+            grid-column:first-start/third-end;
+            justify-self: center;
+        }
+        .items3{
+            background: slateblue;
+        }
+        .items4{
+            background: hotpink;
+        }
+        .items5{
+            background: royalblue;
+            grid-column:third-start/third-end;
+            grid-row:box-start/content-end;
+        }
+        .items6{
+            background: goldenrod;
+            grid-row:content-start/content-end;
+            grid-column: first-start/second-end;
+        }
+        .items7{
+            background:blueviolet;
+            grid-column:first-start/third-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items items1">Header</div>
+        <div class="items items2">Menu</div>
+        <div class="items items3">Box 1 They may say that a paragraph should be 100 to 200 words long, or be no more than five or six sentences. But a good paragraph should not be measured in characters, words, or sentences. The true measure of your paragraphs should be ideasThey may say that a paragraph should be 100 to 200 words long, or be no more than five or six sentences. But a good paragraph should not be measured in characters, words, or sentences. The true measure of your paragraphs should be ideas</div>
+        <div class="items items4">Box 2</div>
+        <div class="items items5">Sidebar</div>
+        <div class="items items6">Content</div>
+        <div class="items items7">Footer</div>
+    </div>
+</body>
+</html>

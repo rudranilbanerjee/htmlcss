@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+        }
+        div.box{
+            color:red;
+        }
+        .box{
+            color: yellow;
+        }
+        [title~="flower"]{
+            background:red;
+        }
+        div:nth-child(even){
+            color:yellow;
+        }
+        /*after each paragraph insert something
+        p: for pseduo class
+        p:: pseudo element*/
+        p::after{
+            content:"this is end para";
+        }
+        /*selection property*/
+        body{
+            background-image: url("logo-image-website.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #hh{
+            min-width: 300px;
+            max-width:700px;
+            margin-top:100px;
+            color:black;
+            border:2px solid green;
+            padding: 0px;
+            margin-right:600px;
+        }
+        img{
+            width:100%;
+        }
+        #nn{
+            color:black;
+            border:2px solid red;
+            padding:20px;
+            margin-top: -58px;
+            margin-left:1000px;
+        }
+        div .box{
+            height:20px;
+            width:30px;
+            border:2px solid blue;
+            background-color:white;
+            margin-right:7px;
+            padding-left: 10px;
+            padding-right:10px;
+            border-radius: 5px;
+        }
+        div .row{
+            margin:8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="hh">
+        <img src="logo-image-website.jpg"/>
+    </div>
+    <div id="nn">
+        In this course, we will introduce participants to the different types of scientific articles and provide an outline of how to 
+        write an original research article describing their original scientific research.To enable health professionals to write scientific 
+        research articles that can be published and to equip them with skills to cite and manage references/ bibliography while writing using 
+        a reference management tool such as Mendeley.
+    </div>
+    <div id="balcony">
+        <div class="row">
+        <span class="box" id="bal-1"></span>
+        <span class="box" id="bal-2"> </span>
+        <span class="box" id="bal-3"></span>
+        <span class="box" id="bal-4"></span>
+        <span class="box" id="bal-5"></span>
+        <span class="box" id="bal-6"></span>
+        <span class="box" id="bal-7"></span>
+        <span class="box" id="bal-8"></span>
+        <span class="box" id="bal-9"></span>
+        <span class="box" id="bal-10"></span>
+        <span class="box" id="bal-11"></span>
+        <span class="box" id="bal-12"></span>
+        </div>
+        <div class="row">
+            <span class="box" id="bal-1"></span>
+            <span class="box" id="bal-2"> </span>
+            <span class="box" id="bal-3"></span>
+            <span class="box" id="bal-4"></span>
+            <span class="box" id="bal-5"></span>
+            <span class="box" id="bal-6"></span>
+            <span class="box" id="bal-7"></span>
+            <span class="box" id="bal-8"></span>
+            <span class="box" id="bal-9"></span>
+            <span class="box" id="bal-10"></span>
+            <span class="box" id="bal-11"></span>
+            <span class="box" id="bal-12"></span>
+        </div>
+        <div class="row">
+            <span class="box" id="bal-1"></span>
+            <span class="box" id="bal-2"> </span>
+            <span class="box" id="bal-3"></span>
+            <span class="box" id="bal-4"></span>
+            <span class="box" id="bal-5"></span>
+            <span class="box" id="bal-6"></span>
+            <span class="box" id="bal-7"></span>
+            <span class="box" id="bal-8"></span>
+            <span class="box" id="bal-9"></span>
+            <span class="box" id="bal-10"></span>
+            <span class="box" id="bal-11"></span>
+            <span class="box" id="bal-12"></span>
+        </div>
+    </div>
+
+</body>
+</html>

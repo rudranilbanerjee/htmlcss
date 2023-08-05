@@ -1,0 +1,165 @@
+html{
+    font-size:16px;
+}
+*{
+    margin:0;
+    padding:0px;
+}
+body{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.main-content{
+    min-height: 1000px;
+    width:90%;
+    display: grid;
+    grid-template-columns: 300px 700px;
+}
+.left-section{
+    grid-column: 1/2;
+    background-color: #242531;
+}
+.left-content{
+    padding:1rem;
+}
+.profile-image{
+    width:60%;
+    border:5px;
+    border-radius: 30%;
+    display:block;
+    margin:auto;
+}
+.name{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color:aliceblue;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02px;
+    padding:0.8rem;
+}
+.designation{
+    font-size:1rem;
+    text-align:center;
+    text-transform: uppercase;
+    padding-bottom:0.5rem;
+    color:antiquewhite;
+}
+.description{
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 1rem;
+    color:wheat;
+}
+.contact-item .social-media{
+    display:flex;
+    justify-content:space-evenly;
+    margin-bottom: 1rem;
+}
+.contact-item div li{
+    list-style: none;
+}
+.contact-item .personal-details li{
+    margin:0.5rem;
+}
+.icon i{
+    margin-right:0.5rem;
+}
+.skills{
+    font-size:0.75rem;
+    text-align:center;
+    text-transform: uppercase;
+    padding:1rem 0.5rem;
+    color:aquamarine;
+}
+.skills .skill-item .skill-name{
+    font-size: 0.65rem;
+    font-weight: 0.65rem;
+    text-align:left;
+    padding-bottom: 0.5rem;
+    color:wheat;
+}
+.skills .skill-item{
+    margin-bottom: 1rem;
+}
+.skills .skill-item .progress-bar{
+    border:1px solid white;
+    height:4px;
+    background-color:white;
+    border-radius: 5px;
+}
+.right-section{
+    grid-column: 2/3;
+    background-color: gainsboro;
+}
+.right-section .right-main-content{
+    padding:2rem 3rem;
+}
+.right-section .right-main-content .right-title{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight:700;
+    padding:0.5rem;
+    letter-spacing: 1px;
+    color:#242531;
+}
+.education .education1{
+    display:flex;
+    margin:0.3rem 0 0.5rem;
+}
+.education .education1 .details p{
+    font-size:0.9rem;
+}
+.details{
+    width:40%;
+}
+.box{
+    padding-left:4rem;
+    padding-bottom: 0.2rem;
+    opacity:0.8;
+    font-weight: bold;
+    color:#050A30;
+}
+.hr{
+    width:100%;
+    border:0.5px solid #050A30;
+    background-color: #050A30;
+}
+.about p{
+    margin: 0.3rem 0;
+    font-size:1rem;
+}
+.heading{
+    margin: 0.3rem 0;
+}
+.list{
+    margin-left:1rem;
+}
+.headingproject{
+    display:flex;
+    margin: 0.3rem 0;
+    color:#050A30;
+    font-size: 1.1rem;
+}
+.headingproject h4{
+    width:70%;
+}
+.headingproject p{
+    padding-left:1rem;
+}
+@media screen and (max-width:674px){
+    .main-content{
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .left-section{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .right-section{
+        grid-column: 1/2;
+        grid-row:2/3;
+    }
+}

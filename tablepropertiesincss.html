@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Properties</title>
+    <style>
+        table,td,th{
+            border:1px solid red;
+            border-spacing: 0px 0px; 
+            padding:10px; 
+            text-align: center;
+            border-collapse:collapse;
+            empty-cells: hide;
+            width:200px;
+            vertical-align:top;
+            table-layout: fixed;
+        }
+        tr:hover{
+            background-color: red;
+        }
+        tr:nth-child(even)
+        {
+            background-color: #f2f2f2;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>FirstName </th>
+            <th>LastName</th>
+            <th>Savings</th>
+        </tr>
+        <tr>
+            <td>Mohan</td>
+            <td>Kumar </td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>Mohan</td>
+            <td>Kumar</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Mohan</td>
+            <td>Kumar</td>
+            <td>$100</td>
+        </tr>
+        <tr>
+            <td>Mohan</td>
+            <td>Kumar</td>
+            <td>$100</td>
+        </tr>
+    </table>
+</body>
+</html>

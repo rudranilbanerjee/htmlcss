@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // the result by comparision operator is true or false
+        // == means if the value of first operator is equal to the value of second operator then its return true otherwise false
+        var x=15;
+        var y=25;
+        var c=(x==y); // the value of c is false
+        console.log(c);
+        x=null;
+        y=undefined;
+        var c=(x==y);// true
+        console.log(c); // the value of c is true because in this case the value of both variable is same but the data type is different,but == operator 
+        // does not check datatype its only check value
+        // === means if equal value and equal type then true otherwise false
+        c=x===y;// false
+        console.log(c); // but in this case the value of c is false because === operator check the both condition like value and also data type 
+        
+        // != means not equal then true otherwise false
+        c=x!=y;// false because x=15 and y="15" at this time so both are equal but the data type not be equal 
+        console.log(c);
+        // !== means not equal and the data type also be not equal then its return true otherwise false
+        c=x!==y;
+        console.log(c);
+        // > greater than
+        y="rudra";
+        c=x>y;// this operator does not matter the data type between x and y
+        console.log(c);
+        // < less than
+        c=x<y;// this operator does not matter the data type between x and y
+        console.log(c); 
+        // >= greater than equal to 
+        y="14"
+        c=x>=y;
+        console.log(c);
+        // <= less than equal to
+        c=x<=y
+        console.log(c);
+    </script>
+</body>
+</html>

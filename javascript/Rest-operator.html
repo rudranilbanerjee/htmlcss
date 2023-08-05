@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sum(name1,...arg){ //here ...arg is a rest operator
+          console.log(name1);
+          let sum=0;
+          for(let i in arg)
+          {
+            sum+=arg[i];
+          }
+          console.log(sum);
+        }
+        sum("rudra",20,30,40,50,70);
+        let arr=[10,30,89,76,56,78,54,67,565];
+        sum("rudra",...arr); // here ...arr is a spread operator
+        // some uses of spread operator
+        let arr1=[10,30,89,76,56,78,54,67,565];
+        let arr2=arr1;
+        arr1.push(55);
+        console.log(arr2);
+        // in this case arr2 is store the address of arr1.so when we add some value in arr1 then it was also be changed for arr2.
+        // Now we are used spread operator in this case
+        arr2=[...arr1];
+        arr1.push(66);
+        console.log(arr2);
+        console.log(arr1);
+        // in this case 66 will be pushed only arr1 not in arr2 because spread opearator just make a clone of arr1 in arr2.
+
+        // we can cancatinate two array by spread operator
+        arr2=[49,36,25,16,9,4];
+        let arr3=[5,...arr1,...arr2,65];
+        console.log(arr3);
+        
+        // we can use in object this spread operator
+        let obj1={
+          name:"yahoo baba",
+        }
+        let obj2={
+          age:25,
+        }
+        let obj3={...obj1,...obj2};
+        console.log(obj3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+         #wrapper{
+            background-color: #eee;
+            list-style: none;
+            padding:20px;
+            margin:50px;
+         }
+         #wrapper li{
+            display: flex;
+            padding: 10px;
+            justify-content: flex-end;
+         }
+         #wrapper li label{
+            flex:1;
+         }
+         #wrapper li input{
+            flex:3;
+         }
+         @media screen and (min-width:1200px){
+            #wrapper li input{
+              flex:8;
+            }
+         }
+         @media screen and (min-width:992px) and (max-width:1199px){
+            #wrapper li input{
+              flex:6;
+            }
+         }
+         @media screen and (min-width:768px) and (max-width:991px){
+            #wrapper li input{
+              flex:5;
+            }
+         }
+         @media screen and (min-width:500px) and (max-width:767px){
+            #wrapper li input{
+              flex:2;
+            }
+         }
+         @media screen and (min-width:250px) and (max-width:499px){
+            #wrapper li{
+                flex-direction: column;
+            }
+            #wrapper li input{
+              flex:2;
+            }
+         }
+         
+    </style>
+</head>
+<body>
+    <form>
+    <ul id="wrapper">
+        <li>
+            <label for="">Name</label>
+            <input type="text">
+        </li>
+        <li>
+            <label for="">Class Name</label>
+            <input type="text">
+        </li>
+        <li>
+            <label for="">Email Address</label>
+            <input type="email">
+        </li>
+        <li>
+            <button type="submit">save</button>
+        </li>
+    </ul>
+    </form>
+</body>
+</html>

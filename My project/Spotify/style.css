@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap');
+*{
+    padding: 0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+    font-family: 'Red Hat Text', sans-serif;
+}
+.nav-bar{
+    display:grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    list-style-type: none;
+    height:4rem;
+    background-color:black;
+    justify-content: center;
+    align-items: center;
+}
+.nav-bar a{
+    text-decoration: none;
+    color:whitesmoke;
+    font-weight: 700;
+}
+.brand{
+    margin-left: 1.5rem;
+}
+.info{
+    width: 43rem;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 3.5rem;
+}
+.user{
+    padding-left:7rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+}
+.user-icon{
+    font-size:xx-large;
+}
+.nav-bar a:hover{
+   color: #1ed760;
+}
+.brand img{
+    height:2.5rem;
+    width:7rem;
+}
+/*------------------Progress Bar------------------*/
+.container{
+    min-height: 70vh;
+    background-color: #1ed760;
+    display:flex;
+    margin: 1.2rem auto;
+    width:95%;
+    border-radius: 12px;
+    padding:2rem;
+    background-image: url("images/Free Music Event Vector.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    color:antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.songPlayDetails{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+.songPlayInfo{
+    position:absolute;
+    width:200px;
+    height:200px;
+    right:20%;
+    background-color: red;
+    border-radius: 50%;
+    overflow: hidden;
+    border:solid black 2px;
+}
+.rotate-img{
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 10s linear infinite;
+}
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+.songItem{
+    color:black;
+    height:50px;
+    display:flex;
+    background-color:aliceblue;
+    width:80%;
+    justify-content:space-between;
+    border-radius: 30px;
+    align-items: center;
+    border:solid black 2px;
+    margin:10px 0;
+}
+.songItem img{
+    height:45px;
+    margin: 0 2px;
+    border-radius: 50%;
+    border: dotted #1ed760 3px;
+}
+.songListPlay{
+    padding-right:10px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.songListPlay .fa-1x{
+    font-size: 2rem;
+    margin-left:0.5rem;
+    cursor: pointer;
+}
+.songBanner{
+    margin-bottom: 0;
+    height:70px;
+    width:100%;
+    background-color: wheat;
+    border:solid #1ed760 1px;
+}
+.songGif{
+    position:absolute;
+    left:8%;
+    top:40%;
+}
+.bottom{
+    position:sticky;
+    height:6.5rem;
+    background-color: black;
+    color:#1ed760;
+    bottom:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+#myProgressBar{
+    width:80vw;
+    margin-top:0.5rem;
+}
+.icons{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+.icons i{
+    margin:1rem 0.5rem;
+    cursor: pointer;
+}
+.fa-2x{
+    font-size: 2.3rem;
+}
+.d-none{
+    display: none;
+}
+
+/*-------------------------------------footer-----------------------------------*/
+.footer{
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 2fr;
+    justify-content: center;
+    align-items:flex-start;
+    padding-top: 5rem;
+    padding-bottom:2rem;
+}
+footer li a{
+    color: whitesmoke;
+    text-decoration: none;
+    cursor:pointer;
+}
+footer li a:hover{
+    color:#1ed760;
+}
+footer .header{
+    color:#919496;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    font-weight: 900;
+}
+.footer li{
+    margin:1.5rem 0px;
+    list-style: none;
+}
+.brand-logo{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2.5rem;
+}
+footer div:not:first-child{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.brand-logo img{
+    height:2.5rem;
+    width:7rem;
+}
+.social-media{
+    display: flex;
+}
+.social-media li{
+    margin: 0 0.5rem;
+    margin-top:2rem;
+    width:3.3rem;
+    height:3.3rem;
+    border-radius: 50%;
+    background-color:#222326;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+a .fa-brands{
+    font-size: 1.5rem;
+}

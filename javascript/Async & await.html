@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // callback
+        const datas=[
+            {name:"Rudra",age:23,course:"B.tech"},
+            {name:"Raja",age:25,course:"B.tech"}
+        ]
+        function getDatas(){
+            setTimeout(()=>{
+                let output="";
+                datas.forEach((data,index)=>{
+                    output+=`<li>${data.name}</li>`
+                })
+                document.body.innerHTML=output;
+            },1000)
+        }
+        function createData(obj){
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                   datas.push(obj);
+                   let t=true;
+                   if(!t){
+                     resolve();
+                   }else{
+                     reject("kuch galat hain");
+                   }
+                },2000)
+            })
+        }
+        // function createData(obj){
+        //     setTimeout(()=>{
+        //         datas.push(obj);
+        //         console.log("Done")
+        //     },2000)
+        // }
+        let start=async function(){
+            console.log("b");
+            await createData({name:"Abhishek",age:23,course:"B.Tech"}).catch((err)=>{
+                console.log(err);
+            }); // 1st wala bus
+            // neeche ki 3 passenger 
+            console.log("c");
+            getDatas();
+            console.log(datas);
+        }
+        console.log("a");
+        start();
+        console.log("d"); 
+        console.log("e");      
+        //console.log(datas);
+        // createData({name:"Abhishek",age:23,course:"B.Tech"})
+        // .then(getDatas)
+        // .catch((err)=>{console.log(err)});
+        // console.log(datas);
+        //
+        // let complete=false;
+        // async function test(complete){
+        //     console.log("a");
+        //     await console.log("b");
+        //     console.log("c");
+        //     return "Hello";
+        // }
+        // test().then((result)=>{
+        //    console.log(result);
+        // });
+        // console.log("d");
+        // console.log("e");
+    </script>
+</body>
+</html>

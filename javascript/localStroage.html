@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="fun()">
+    <input id="todo-input">
+    <button id="add-todo">Add todo</button>
+    <ul id="todo-holder"></ul>
+    <script>
+        var todoholder=document.getElementById('todo-holder');
+        var todoInput=document.getElementById('todo-input');
+        var addTodo=document.getElementById('add-todo');
+        let size=localStorage.length;
+        let i=size;
+        i=i+1;
+        function fun(){
+            let size=localStorage.length;
+            for(let i=0;i<size;i++)
+            {
+               let value=localStorage.getItem(key);
+               var todoItem=document.createElement('li');
+               todoItem.innerHTML=value;
+               todoholder.appendChild(todoItem);
+            }
+        }
+        addTodo.addEventListener('click',()=>{
+            var todo=todoInput.value;
+            alert(i);
+            localStorage.setItem(i,todo);
+            i++;
+            var todoItem=document.createElement('li');
+            todoItem.innerHTML=todo;
+            todoholder.appendChild(todoItem);
+            todoInput.value="";
+        })
+    </script>
+</body>
+</html>

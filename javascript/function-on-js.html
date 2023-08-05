@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* basic syntax of function in javascript
+         function(keyword) function_name(){
+           console.log("hello");
+        }
+        */
+        function fun(){
+           console.log("hello");
+        }
+        fun();
+        alert("show me");
+        fun();
+
+    //     // in this casse both the situation is same
+    //     // but incase if the work capability is same of both the function 
+
+    //     /* function with parameter in js
+    //       function(keyword) function_name(parameter1,parameter2){
+    //         statement....
+    //       }
+    //     */
+       function hello(fname,lname)
+       {
+        document.write("Hello"+ fname +" "+ lname);
+       }
+        hello();
+         // we can send by default value of the parameter of function fname and lname
+        function hello1(fname="Rudranil", lname="Banerjee")
+        {
+        document.write("Hello"+ fname+" "+lname);
+        }
+        hello1();
+        hello1("salman","khan")
+
+    //     /* function with return value
+    //         function(keyword) function_name(parameter1,parameter2){
+    //         statements
+    //         return value;
+    //       }
+    //     */
+    // this is a anonnymous function
+       function fun1(a)
+       {
+        return a;
+       }
+       var ab=fun1(4);
+       //console.log(ab);
+       var y=function(a=5,b=7){
+        return a+b;
+       };
+       console.log(y(7,8));
+    </script>
+</body>
+</html>
